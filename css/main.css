@@ -1,275 +1,226 @@
-/* Global Styles */
+/******** GLOBAL STYLES ********/
+html {
+  font-size: 16px;
+}
+
 body {
-  font-family: 'Montserrat', sans-serif;
-  line-height: 1.5;
+  font-family: "Montserrat", Helvetica, Arial, sans-serif;
+  font-size: 0.9em;
+  color: #000000;
 }
 
+/* The width property has been changed to max-width */
 .content-wrapper {
-  width: 90%;
   max-width: 1200px;
-}
-
-
-header,
-main,
-footer {
+  width: 90%;
   display: flex;
   justify-content: center;
+  flex-flow: row wrap;
+  /*margin: 0 auto;*/
+  /*overflow: auto;*/
 }
 
-/* Global Text Styles */
+h1,
+h2,
+h3,
+h4 {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
 h1 {
-  font-size: 1.25rem;
-  color: #295981;
-  font-family: 'Salsa', cursive;
-  padding: 50px 0 25px 0;
-  margin: 0;
+  font-size: 30px;
 }
 
 h2 {
-  width: 100%;
-  margin: 0;
-  font-size: 1.25rem;
-  color: #295981;
+  font-size: 24px;
 }
 
 h3 {
-  color: #295981;
+  font-size: 20px;
 }
 
-/* Header Section */
-header .content-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-flow: column wrap;
-  border-bottom: 20px dotted #295981;
-  padding: 50px 0;
+h4 {
+  font-size: 12px;
 }
 
-header .donate-link {
-  background: #a40b28;
-  padding: 10px 30px;
-  color: white;
-  align-self: flex-end;
-  /* add align-self; flex-end; to overwrite align-items: center; from the parent container */
-  border-radius: 5px;
+p {
+  line-height: 36px;
 }
 
-.header-paragraph {
-  padding-bottom: 50px;
-  color: #295981;
-  font-size: 1.25rem;
-}
-
-.about {
-  display: flex;
-  flex-flow: row wrap;
-  background-color: #f3c06d;
-}
-
-.about-text {
-  width: 100%;
+/******** HEADER STYLES ********/
+/* The widths are in a percentage! */
+header {
   display: flex;
   justify-content: center;
-  flex-flow: row wrap;
+  text-align: center;
+  /*height: 110px;
+	margin: 0 auto;*/
 }
 
-.about-text h2,
-.about-text p {
-  width: 80%;
-}
-
-.about-image {
+header h1 {
+  /*float: left;*/
+  margin: 0;
+  border-bottom: 3px solid #77a466;
+  padding: 38px 0 20px 0;
   width: 100%;
 }
 
-.about-image img {
-  width: 100%;
-  margin-bottom: -6px;
+header h1 span {
+  color: #45610e;
 }
 
-/* End Header Section */
-
-/* Main Section */
-
-main .content-wrapper {
-  display: flex;
-  justify-content: center;
-  flex-flow: row wrap;
-  padding: 50px 0;
+header nav {
+  /*float: right;*/
+  padding: 46px 0;
 }
 
-.main-content-wrapper {
-  max-width: 800px;
-}
-
-.main-content-wrapper h2 {
-  font-family: 'Salsa', cursive;
-  font-size: 2.25rem;
-}
-
-.our-programs {
-  display: flex;
-  justify-content: center;
-  flex-flow: row wrap;
-  border-bottom: 15px dotted #295981;
-}
-
-.program {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 80%;
-  width: 100%;
-  padding: 50px 0;
-}
-
-.program-image {
-  width: 100%;
-}
-
-.program-image img {
-  width: 100%;
-  object-fit: cover;
-}
-
-.program .donate-link {
-  background: #a40b28;
-  padding: 10px 30px;
-  color: white;
-  border-radius: 5px;
-  margin-top: 25px;
-}
-
-.fundraising {
-  padding: 50px 0;
-}
-
-aside {
-  display: flex;
-  justify-content: center;
-  background-color: #f0f8ff;
-  padding: 50px 0;
-}
-
-.aside-content-wrapper {
-  display: flex;
-  flex-flow: row wrap;
-  align-content: flex-start;
-  width: 80%;
-}
-
-.aside-content-wrapper .social-media {
-  display: flex;
+header nav ul {
+  /*margin: 0;*/
+  padding: 0;
   list-style: none;
-  gap: 20px;
+}
+
+header nav ul li {
+  /*display: inline-block;*/
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 10px 0;
+  width: 100%;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: #45610e;
+}
+
+/********  MAIN STYLES ********/
+/******** TOP SECTION ********/
+/* The widths are in a percentage! */
+.main-image img {
+  width: 100%;
+  border-top: 3px solid #77a466;
+  border-bottom: 3px solid #77a466;
+}
+
+.main-title h2 {
+  color: #45610e;
+  padding: 5px 0;
+}
+
+/******** BOTTOM SECTION ********/
+.top-section,
+.bottom-section {
+  display: flex;
+  justify-content: center;
+}
+
+.bottom-section .content-wrapper {
+  border-top: 5px solid #eee;
+  border-bottom: 5px solid #eee;
+}
+
+.section-one,
+.section-two,
+.section-three {
+  box-sizing: border-box;
+  /*float: left;*/
+}
+
+.section-one {
+  width: 100%;
+}
+
+.section-two {
+  width: 100%;
+  border-top: 5px solid #eee;
+  border-bottom: 5px solid #eee;
+}
+
+.section-three {
+  width: 100%;
+}
+
+.bottom-section h3 {
+  margin: 30px 0;
+}
+
+.menu-list {
   padding-left: 0;
-  width: 100%;
-  padding-bottom: 16px;
-  font-size: 1.25rem;
+  list-style: none;
 }
 
-/* End Main Section */
+.menu-list li {
+  color: #45610e;
+  font-size: 1rem;
+  line-height: 36px;
+}
 
-/* Footer Section */
-footer .content-wrapper {
-  padding: 50px 0;
+/******** FOOTER STYLES ********/
+/* The widths are in a percentage! */
+footer {
   display: flex;
-  flex-flow: row wrap;
-  border-top: 20px dotted #295981;
+  justify-content: center;
+  text-align: center;
+  margin-top: 8px;
 }
 
-footer h2 {
-  font-family: 'Salsa', cursive;
-  font-size: 2.25rem;
-  padding-bottom: 50px;
+footer span {
+  font-family: "Galada", cursive;
+  text-transform: lowercase;
+  color: #45610e;
+  font-size: 14px;
 }
 
-.footer-content-wrapper {
-  display: flex;
-  flex-flow: row wrap;
-}
-
-footer img {
-  width: 100%;
-object-fit: cover;
-}
-
-/* End Footer Section */
-
-@media (min-width: 768px) {
-
-  h1 {
-    font-size: 3rem;
+@media all and (min-width: 768px) {
+  .bottom-section .content-wrapper {
+    justify-content: space-evenly;
   }
 
-  main .content-wrapper {
+  .section-one {
+    width: 26%;
+  }
+
+  .section-two {
+    width: 40%;
+    border-left: 5px solid #eee;
+    border-right: 5px solid #eee;
+    border-top: none;
+    border-bottom: none;
+    padding: 0 30px;
+  }
+
+  .section-three {
+    width: 26%;
+  }
+  /* Tablet styles here */
+}
+
+@media all and (min-width: 1200px) {
+  body {
+    font-size: 1em;
+  }
+
+  header .content-wrapper {
     justify-content: space-between;
-    padding-bottom: 0;
-    column-gap: 20px;
-  }
-
-  .main-content-wrapper {
-    flex-grow: 1;
-    /* Add flex-grow: 1; so that the main-content-wrapper fills up any extra space in the parent container. */
-    width: 55%;
-  }
-
-  aside {
-    /*width: 300px;/*
-    /* Add flex: 0 0 300px; so that the sidebar doesn't shrink below the optimum width of 300px. */
-    /* Add align-self: flex-start; to overwrite the default align-items' value of stretch. */
-    flex: 0 0 300px;
-    align-self: flex-start;
-  }
-
-  footer img {
-    width: 25%;
-  }
-
-}
-
-@media (min-width: 1024px) {
-  .about {
-    display: flex;
     align-items: center;
+    padding: 20 px 0;
   }
 
-  .about-text {
-    width: 50%;
-    order: 1;
-    /* Change the placement of the text by adding order: 1; */
+  header h1 {
+    width: 30%;
+    padding: 0;
+    border-bottom: none;
+    text-align: left;
+  }
+  header nav {
+    width: 21%;
   }
 
-  .about-image {
-    width: 50%;
-    order 2;
-    /* Change the placement of the image by adding order: 2; */
-  }
-
-}
-
-@media (min-width: 1200px) {
-  h1 {
-    font-size: 2.5rem;
-  }
-
-  .main-content-wrapper {
-    padding-bottom: 50px;
-  }
-
-  .our-programs {
+  header nav ul {
+    display: flex;
     justify-content: space-between;
   }
-
-  .program {
-    width: 45%;
-    flex: 1;
-  }
-
-  .program p {
-    flex-grow: 1;
-    /* Add flex-grow: 1; so that the extra space within the card is below the paragraph instead of below the link. */
-  }
+  /* Desktop styles here */
 }
